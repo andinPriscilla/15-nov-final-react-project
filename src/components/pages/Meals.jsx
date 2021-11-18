@@ -1,6 +1,6 @@
 import {useContext, useEffect} from 'react'
-import {useLocation} from 'react-router-dom' //uselocation will be use topick up the state which is in the categorycard
-import MealCard from '../MealCard'
+import {useLocation, useNavigate} from 'react-router-dom' //uselocation will be use to pick up the state which is in the categorycard
+import MealCard from './MealCard'
 
 import MyContext from '../../context/MyContext'
 
@@ -8,6 +8,9 @@ const Meals = () => {
     const location = useLocation()
     const category = location.state
     const context = useContext(MyContext)
+
+    const navigate = useNavigate()
+    
     
 
     const {meals, setMeals} = context
@@ -34,9 +37,14 @@ useEffect(() =>{
 
 
     return (
-        <div>
+        <div className="meals">
+            <h1>Specific food</h1>
+             <div className='meal'>
             {mealsList}
         </div>
+        <button onClick={() => navigate(-1)}>Return to Categories</button>
+        </div>
+       
     )
 }
 

@@ -8,6 +8,13 @@ const MyProvider = (props) => {
     const [categories,setCategories] = useState([])
     const [meals, setMeals] = useState([])
     const [ingredients, setIngredients] = useState([])
+    const [input, setInput] = useState("")
+    const [search, setSearch] = useState("")
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        setSearch(input)
+    }
 
         useEffect(() =>{
             try {
@@ -26,7 +33,7 @@ const MyProvider = (props) => {
         },[])
 
     return (
-        <MyContext.Provider value={{categories, meals, setMeals, ingredients, setIngredients}}>
+        <MyContext.Provider value={{categories, meals, setMeals, ingredients, setIngredients, setInput, input,search, handleSubmit}}>
             {props.children}
         </MyContext.Provider>
     )

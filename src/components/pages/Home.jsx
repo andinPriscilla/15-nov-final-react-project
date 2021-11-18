@@ -10,8 +10,11 @@ const Home = () => {
     const categoriesList = categories.map(category =>  <CategoryCard key={category.idCategory} category={category}/>)
 
     return (
-        <div>
+        <div className="categorielist">
+        <h1>Food Categories</h1>
+        <div className="categories">
             {categoriesList}
+        </div>
         </div>
     )
 }

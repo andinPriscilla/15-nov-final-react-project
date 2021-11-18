@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+#root {
+  /*  background-color: rgb(218, 173, 159); */
+}
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2em;
+}
+header {
+  background-color:rgb(68, 67, 67);
+  width: 100%;
+}
+header img {
+  width: 5em;
+  padding-left: 1em;
+  box-sizing: border-box;
+}
+.form {
+  float: right;
+  padding-top: 1.5em;
+  padding-right: 50px;
+}
+
+input {
+  padding: 13px;
+}
+.categorielist {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  /*  height:80vh; */
+  overflow: auto;
+  background: rgb(20, 20, 20);
+}
+
+.categorielist h1 {
+  width: 100%;
+  text-align: center;
+  color:gray;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 60px;
+}
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  color: green;
+  border: 1px solid gray;
+}
+.category {
+  border: 1px solid gray;
+  padding: 2em;
+  margin: 1em;
+  color:gray;
+  font-size:20px;
+  text-decoration: none;
+}
+.meals {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  overflow: auto;
+ background-color:rgb(46, 45, 45);
+
+}
+.meals h1 {
+  width: 100%;
+  text-align: center;
+  color: gray;
+}
+.meal {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
+  
+}
+.mealcard {
+  
+  border: 1px solid gray;
+  padding: 1em;
+  margin: 1em;
+  color:gray;
+  text-align: center;
+  
+  
+}
+.recipe{
+  display: flex;
+  flex-wrap: wrap;
+ background-color:rgb(46, 45, 45);
+
+}
+.recipe h1 {
+  width: 100%;
+  text-align:center;
+}
+button {
+  padding: 1em;
+  
+}

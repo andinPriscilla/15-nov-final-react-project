@@ -12,12 +12,14 @@ const Routes = () => {
     return (
         <MyProvider>
             <Router>
-                <Header />
-                <Switch>
-                    <Route path='/' element={<Home />} />
-                    <Route path='/meals' element={<Meals />} />
-                    <Route path='/ingredients' element={<Ingredients />} />
-                </Switch>
+                <main>
+                    <Header />
+                    <Switch>
+                        <Route path='/' element={<Home />} />
+                        <Route path='/meals' element={<Meals />} />
+                        <Route path='/ingredients' element={<Ingredients />} />
+                    </Switch>
+                </main>
                 
             </Router>
         </MyProvider>
