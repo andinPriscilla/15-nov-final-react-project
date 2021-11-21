@@ -53,16 +53,26 @@ const Ingredients = () => {
     return (
         <div className="recipes">
             <h1>Recipe and Measurement Of Food</h1>
-        
-                    <h2>{strMeal}</h2>
-                    <img src={strMealThumb} alt={strMeal} />
-                    <p>{strInstructions}</p>
-                    <ul>
-                        {ingredientsList}
-                    </ul>
+        <h2>{strMeal}</h2>
+            <div className="recipe">
+                        
+                        <img src={strMealThumb} alt={strMeal} />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <div className="instruction">
+                            <h3>Method of Preparation</h3>
+                            <p>{strInstructions}</p>
+                            &nbsp;
+                            <ul>
+                                <h3>Ingredients and Measurements</h3>
+                                {ingredientsList}
+                            </ul>
+                            
+                         
+                        </div>
+    
+        </div>
        
-       
-            <button onClick={() => navigate(-1)}>Return to  Meals</button>
+            <button onClick={() => navigate(-1)} className="returnbutton">Return to  Meals</button>
          
         </div>
     )

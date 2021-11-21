@@ -4,7 +4,7 @@
   margin: 0;
 }
 #root {
-  /*  background-color: rgb(218, 173, 159); */
+    /* background-color: rgb(218, 173, 159);  */
 }
 main {
   height: 100vh;
@@ -15,6 +15,8 @@ main {
 header {
   background-color:rgb(68, 67, 67);
   width: 100%;
+  /* position: fixed; */
+
 }
 header img {
   width: 5em;
@@ -28,7 +30,7 @@ header img {
 }
 
 input {
-  padding: 13px;
+  padding: 8px;
 }
 .categorielist {
   display: flex;
@@ -37,6 +39,7 @@ input {
   /*  height:80vh; */
   overflow: auto;
   background: rgb(20, 20, 20);
+  margin: 0 auto;
 }
 
 .categorielist h1 {
@@ -67,17 +70,23 @@ input {
   text-align: center;
   overflow: auto;
  background-color:rgb(46, 45, 45);
+ margin:0 auto;
 
 }
-.meals h1 {
+.meal h1 {
   width: 100%;
   text-align: center;
-  color: gray;
+  color:white;
+  margin-top: 0.5em;
+  margin-bottom:0.5em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
 }
 .meal {
-  display: flex;
+  background-color:rgb(46, 45, 45);
+  /* display: flex;
   flex-wrap: wrap;
-  overflow: auto;
+  overflow: auto; */
   
 }
 .mealcard {
@@ -90,17 +99,80 @@ input {
   
   
 }
-.recipe{
-  display: flex;
-  flex-wrap: wrap;
- background-color:rgb(46, 45, 45);
+.mealcard h3 {
+  margin: 0.5em auto;
+  color: beige;
+  text-decoration:none;
 
 }
-.recipe h1 {
+.recipes{
+  background-color:rgb(46, 45, 45);
+
+
+}
+.recipe {
+  display: flex;
+  
+}
+.recipes h1 {
   width: 100%;
-  text-align:center;
+  text-align: center;
+  color:white;
+  margin-top: 0.5em;
+  margin-bottom:0.5em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
+}
+.recipes h2 {
+  color: beige;
+  margin-left: 10em;
+  margin-bottom:10px ;
+
+}
+.instruction {
+  font-size:20px;
+  color:gray;
+}
+.instruction h3 {
+  color: beige;
+  margin-bottom: 10px;
+}
+.instruction ul {
+  list-style-type: square;
 }
 button {
-  padding: 1em;
+  padding:0.5rem;
+  
+}
+.returnbutton {
+  margin:1rem 1rem 10px 90%;
+  background-color:beige;
+  border-radius: 10px 100px / 120px;
+}
+.searchResults {
+   background-color:rgb(46, 45, 45)
+}
+.searchResults h1 {
+  text-align: center;
+  color:white;
+  margin-top: 0.5em;
+  margin-bottom:0.5em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 5
+}
+.search {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border: 1px solid gray;
+ 
+  
+}
+.list-item {
+  list-style-type: none
+}
+.list-item h3 {
+  text-align: center;
+  margin: 0.5em auto
   
 }
