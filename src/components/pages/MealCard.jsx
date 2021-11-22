@@ -3,7 +3,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const MealCard = ({ meal }) => {
-    const { strMeal, strMealThumb, idMeal } = meal
+    const { strMeal, strMealThumb, idMeal,strYoutube } = meal
 
 
 
@@ -14,6 +14,7 @@ const MealCard = ({ meal }) => {
             <div className='mealcard'>
                 <h3>{strMeal}</h3>
                 <img src={strMealThumb} alt={strMeal} width="300px" />
+                
             </div>
         </div>
         </Link>

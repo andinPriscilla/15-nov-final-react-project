@@ -11,7 +11,7 @@ const Home = () => {
 
     return (
         <div className="categorielist">
-        <h1>Food Categories</h1>
+        <h1> Categories Of Food</h1>
         <div className="categories">
             {categoriesList}
         </div>

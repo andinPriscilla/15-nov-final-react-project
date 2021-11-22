@@ -1,34 +1,32 @@
-import { useContext, useEffect, useState,navigate } from 'react'
+import { useContext, useEffect, useState } from 'react'
 
-import {Link} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
+
+import MealCard from './MealCard'
+
 
 import MyContext from '../../context/MyContext'
 
 const SearchResults = () => {
     const context = useContext(MyContext)
-    const { input,idMeal,strMeal,strMealThumb } = context
+    const { search } = context
 
 
     const [mealItems, setMealItems] = useState([])
 
+    const navigate = useNavigate()
+
 
     useEffect(() => {
-        console.log(input)
+    
         try {
             const getByName = async () => {
-                const response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${input}`)
+                const response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`)
                 const data = await response.json()
-                /* setMeals(data.meals) */
-                console.log(data);
-                const listItems = data.meals.map(item =>
-                    <li key={item.idMeal} className="list-item">
-                        <h3>{item.strMeal}</h3>
-                        <img src={item.strMealThumb} alt={item.strMeal} width="300px"/>
+                setMealItems(data.meals)
 
-                    </li>
 
-                )
-                setMealItems(listItems)
+
 
             }
             getByName()
@@ -37,27 +35,25 @@ const SearchResults = () => {
         }
 
 
-    }, [])
+    }, [search])
+
+    const mealsList = mealItems.map(meal => <MealCard key={meal.idMeal} meal={meal} />)
 
     return (
 
         <div>
-            <Link to='/ingredients' state={idMeal} >
-            <div>
-            <div className='mealcard'>
-                <h3>{strMeal}</h3>
-                <img src={strMealThumb} alt={strMeal} width="200px" />
-            </div>
-                </div>
-                </Link>
+
             <div className="searchResults">
                 <h1>Search Results</h1>
+                {mealsList}
+                {/*  
                 <ul className="search">
                     {mealItems}
-                </ul>
+                </ul> */}
+                            <button onClick={() => navigate(-1)} className="returnbutton">Return to  Meals</button>
+
             </div>
 
-           
         </div>
     )
 }
