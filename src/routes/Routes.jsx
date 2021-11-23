@@ -7,6 +7,7 @@ import Header from '../components/Header'
 import Home from '../components/pages/Home'
 import Meals from '../components/pages/Meals'
 import Ingredients from '../components/pages/Ingredients'
+import SearchResults from '../components/pages/SearchResults'
 
 const Routes = () => {
     return (
@@ -18,6 +19,7 @@ const Routes = () => {
                         <Route path='/' element={<Home />} />
                         <Route path='/meals' element={<Meals />} />
                         <Route path='/ingredients' element={<Ingredients />} />
+                        <Route path='/search-results' element={<SearchResults />} />
                     </Switch>
                 </main>
                 

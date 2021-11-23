@@ -37,12 +37,12 @@ useEffect(() =>{
 
 
     return (
-        <div className="meals">
-            <h1>Specific food</h1>
-             <div className='meal'>
+        <div className="meal">
+            <h1>Food Category</h1>
+             <div className='meals'>
             {mealsList}
         </div>
-        <button onClick={() => navigate(-1)}>Return to Categories</button>
+        <button onClick={() => navigate(-1)}  className="returnbutton">Return to Categories</button>
         </div>
        
     )

@@ -9,13 +9,10 @@ const Ingredients = () => {
     const location = useLocation()
     const mealId = location.state
     const context = useContext(MyContext)
+    const {ingredients,setIngredients} = context
+    const {strMeal, strMealThumb,strInstructions,idMeal,strYoutube} = ingredients
 
     const navigate = useNavigate()
-
-
-    const { ingredients, setIngredients } = context
-    const {strMeal, strMealThumb, strInstructions} = ingredients
-
 
     useEffect(() => {
         try {
@@ -48,21 +45,32 @@ const Ingredients = () => {
        
     }
 
-    const ingredientsList = ingredientsArray.map(object => <li>{object.ingredient}---{object.measurement}</li>)
+    const ingredientsList = ingredientsArray.map(object => <li>{object.ingredient} - {object.measurement}</li>)
  
     return (
         <div className="recipes">
             <h1>Recipe and Measurement Of Food</h1>
-        
-                    <h2>{strMeal}</h2>
-                    <img src={strMealThumb} alt={strMeal} />
-                    <p>{strInstructions}</p>
-                    <ul>
-                        {ingredientsList}
-                    </ul>
+        <h2>{strMeal}</h2>
+            <div className="recipe">
+                        
+                        <img src={strMealThumb} alt={strMeal} width="500px"/>
+                    
+                        <div className="instruction">
+                            <h3>Method of Preparation</h3>
+                            <p>{strInstructions}</p>
+                            &nbsp;
+                            <ul key={idMeal}>
+                                <h3>Ingredients and Measurements</h3>
+                                {ingredientsList}
+                            </ul>
+                            &nbsp;
+                            <h3>YouTube Link</h3>
+                         <p>{strYoutube}</p>
+                        </div>
+    
+        </div>
        
-       
-            <button onClick={() => navigate(-1)}>Return to  Meals</button>
+            <button onClick={() => navigate(-1)} className="returnbutton">Return</button>
          
         </div>
     )
