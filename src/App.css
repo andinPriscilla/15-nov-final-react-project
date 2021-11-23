@@ -7,7 +7,7 @@
   /* background-color: rgb(218, 173, 159);  */
 }
 main {
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   padding: 0 2em;

@@ -50,7 +50,7 @@ const SearchResults = () => {
                 <ul className="search">
                     {mealItems}
                 </ul> */}
-                            <button onClick={() => navigate(-1)} className="returnbutton">Return to  Meals</button>
+                            <button onClick={() => navigate(-1)} className="returnbutton">Return</button>
 
             </div>
 

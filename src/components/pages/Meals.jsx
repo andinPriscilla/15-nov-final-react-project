@@ -38,7 +38,7 @@ useEffect(() =>{
 
     return (
         <div className="meal">
-            <h1>Meal Category</h1>
+            <h1>Food Category</h1>
              <div className='meals'>
             {mealsList}
         </div>

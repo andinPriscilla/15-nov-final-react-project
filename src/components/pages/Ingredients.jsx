@@ -9,13 +9,10 @@ const Ingredients = () => {
     const location = useLocation()
     const mealId = location.state
     const context = useContext(MyContext)
+    const {ingredients,setIngredients} = context
+    const {strMeal, strMealThumb,strInstructions,idMeal,strYoutube} = ingredients
 
     const navigate = useNavigate()
-
-
-    const { ingredients, setIngredients } = context
-    const {strMeal, strMealThumb, strInstructions,strYoutube} = ingredients
-
 
     useEffect(() => {
         try {
@@ -62,7 +59,7 @@ const Ingredients = () => {
                             <h3>Method of Preparation</h3>
                             <p>{strInstructions}</p>
                             &nbsp;
-                            <ul>
+                            <ul key={idMeal}>
                                 <h3>Ingredients and Measurements</h3>
                                 {ingredientsList}
                             </ul>
@@ -73,7 +70,7 @@ const Ingredients = () => {
     
         </div>
        
-            <button onClick={() => navigate(-1)} className="returnbutton">Return to Meals</button>
+            <button onClick={() => navigate(-1)} className="returnbutton">Return</button>
          
         </div>
     )
