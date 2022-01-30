@@ -29,10 +29,10 @@ const SearchResults = () => {
 
                 if (meals) {
                   setMealItems(meals)
-                //   setSearchFeedback("")
+                  setSearchFeedback("")
                 } else {
-                  // No matching items were found
-                //   setSearchFeedback("No matches found")
+                  //No matching items were found
+                  setSearchFeedback("No matches found")
                 }
 
 
