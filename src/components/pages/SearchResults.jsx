@@ -24,15 +24,14 @@ const SearchResults = () => {
                 const response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`)
                 const data = await response.json()
 
-                // console.log(data) // could be { meals: null }
                 const { meals } = data
 
                 if (meals) {
                   setMealItems(meals)
-                //   setSearchFeedback("")
+                  setSearchFeedback("")
                 } else {
-                  // No matching items were found
-                //   setSearchFeedback("No matches found")
+                //   No matching items were found
+                  setSearchFeedback("No matches found")
                 }
 
 

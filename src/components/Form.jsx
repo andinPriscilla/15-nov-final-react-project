@@ -6,7 +6,7 @@ import MyContext from '../context/MyContext'
 
 const Form = () => {
     const context = useContext(MyContext)
-    const { input, setInput, setSearch } = context
+    const { input, setInput, setSearch, searchFeedback } = context
 
     const navigate = useNavigate()
     
@@ -32,7 +32,7 @@ const Form = () => {
                 &nbsp;
             </>
             <input value={input} type="text"  onChange={(e) => setInput(e.target.value)} />
-
+            <p style={{color: "red"}}>{searchFeedback}</p>
         </form>
     )
 }
