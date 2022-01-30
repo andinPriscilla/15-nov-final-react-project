@@ -9,7 +9,7 @@ import MyContext from '../../context/MyContext'
 
 const SearchResults = () => {
     const context = useContext(MyContext)
-    const { search } = context
+    const { search, setSearchFeedback } = context
 
 
     const [mealItems, setMealItems] = useState([])
@@ -23,7 +23,17 @@ const SearchResults = () => {
             const getByName = async () => {
                 const response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`)
                 const data = await response.json()
-                setMealItems(data.meals)
+
+                // console.log(data) // could be { meals: null }
+                const { meals } = data
+
+                if (meals) {
+                  setMealItems(meals)
+                //   setSearchFeedback("")
+                } else {
+                  // No matching items were found
+                //   setSearchFeedback("No matches found")
+                }
 
 
 
@@ -35,7 +45,7 @@ const SearchResults = () => {
         }
 
 
-    }, [search])
+    }, [search,setSearchFeedback])
 
     const mealsList = mealItems.map(meal => <MealCard key={meal.idMeal} meal={meal} />)
 

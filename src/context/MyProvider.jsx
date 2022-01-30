@@ -6,6 +6,7 @@ const MyProvider = (props) => {
   const [categories, setCategories] = useState([]);
   const [meals, setMeals] = useState([]);
   const [ingredients, setIngredients] = useState([]);
+  const [searchFeedback, setSearchFeedback] = useState("")
 
   const [input, setInput] = useState("");
   const [search, setSearch] = useState("");
@@ -38,7 +39,9 @@ const MyProvider = (props) => {
         setInput,
         input,
         search,
-        setSearch
+        setSearch,
+        searchFeedback,
+        setSearchFeedback
         
       }}
     >
