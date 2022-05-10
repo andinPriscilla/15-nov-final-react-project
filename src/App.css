@@ -10,10 +10,10 @@ main {
   /* height: 100vh; */
   display: flex;
   flex-direction: column;
-  padding: 0 2em;
+  
 }
 header {
-  background-color: rgb(68, 67, 67);
+  background-color:#ABAC7F;
   width: 100%;
   /* position: fixed; */
 }
@@ -23,9 +23,11 @@ header img {
   box-sizing: border-box;
 }
 .form {
-  float: right;
-  padding-top: 1.5em;
-  padding-right: 50px;
+ display: flex;
+ justify-content:flex-end;
+ padding: 1rem;
+  
+  
 }
 /* .form button :hover {
   background-color:green;
@@ -39,77 +41,104 @@ input {
   display: flex;
   flex-wrap: wrap;
   text-align: center;
-  /*  height:80vh; */
-  overflow: auto;
-  background: rgb(20, 20, 20);
+  background:#717744;
   margin: 0 auto;
+
 }
+  @media(min-width: 768px) {
+   .categorielist{
+    margin: 0 auto;
+    padding: 0 2rem;  
+   }
+  }
+
 
 .categorielist h1 {
   width: 100%;
   text-align: center;
-  color: gray;
+  color:#373D20;
   font-family: "Courier New", Courier, monospace;
   font-size: 60px;
+  margin:2rem 2rem;
 }
 .categories {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  border: 1px solid gray;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  
 }
 .category {
-  border: 3px solid gray;
+  border: 1px solid gray;
   padding: 2em;
   margin: 1em;
   color: gray;
+  background-color:#ABAC7F;
   border-radius: 10px;
   font-size: 20px;
-  background-color: rgb(187, 187, 187);
   text-decoration: none;
 }
 .category h3{
   margin: 0.5em auto;
-  color: black;
+  color:#373D20;
   text-decoration: underline;
   font-size: 30px;
 }
 .meals {
-  display: flex;
-  flex-wrap: wrap;
-  text-align: center;
-  overflow: auto;
-  background-color: rgb(46, 45, 45);
-  margin: 0 5em;
+ display:flex;
+ flex-wrap: wrap;
+ 
+ align-items: center;
+ margin: 0 auto;
+  background-color:#717744;
+ 
+  
+
+}
+@media (min-width: 768px) {
+ .meals{
+   display:flex;
+   flex-wrap: wrap;
+   margin: 0 auto;
+   padding:0 2rem;
+ } 
 }
 .meal h1 {
   width: 100%;
   text-align: center;
-  color: white;
+  color:#373D20;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 50px;
 }
 .meal {
-  background-color: rgb(46, 45, 45);
-
-  /* display: flex;
+ 
+  display: flex;
+ 
   flex-wrap: wrap;
-  overflow: auto; */
+  justify-content: center;
+  align-items: center;
+  background-color: #717744;
+ padding: 0 1rem;
+
+ display: flex;
+  flex-wrap: wrap;
+  
 }
 .mealcard {
-  border: 3px solid gray;
-  padding: 1em;
-  margin:1em 1em;
-  color: gray;
+  border: 1px solid gray;
+  padding: 1rem;
+  margin:1rem 1rem;
   text-align: center;
   border-radius: 20px;
-  background-color:black;
+  background-color:#ABAC7F;
 }
 .mealcard h3 {
   margin: 0.5em auto;
-  color: beige;
+  color:#373D20;
+  word-wrap: break-word;
   text-decoration: none;
   font-size: 25px;
   text-decoration: underline;
@@ -120,38 +149,53 @@ input {
 }
 
 .recipes {
-  background-color: rgb(46, 45, 45);
+  display:flex;
+  flex-wrap: wrap;
+  background-color: #717744;
 }
-.recipe {
+@media (min-width: 608px) {
+.recipes {
   display: flex;
-  margin: 0 3em;
+  justify-content: column;
+  align-items: center;
+
 }
-.recipes h1 {
+}
+
+.measurement {
+  background-color:#717744;
+  padding:0 2rem;
+  
+}
+.measurement h1 {
   width: 100%;
   text-align: center;
-  color: white;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
+  color: #373D20;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 50px;
+  font-size: 40px;
 }
 .recipes h2 {
-  color: beige;
-  margin-left: 10em;
-  margin-bottom: 10px;
+  color: #373D20;
+  text-align: center;
+  padding-bottom:0.5rem;
 }
-.recipe img {
-  border-radius: 20px;
-  border: 3px solid beige;
+
+
+.image img {
+border-radius: 10px;
+margin: auto;
+padding: 0 1rem;
 }
 .instruction {
   font-size: 20px;
-  color: gray;
+  color: rgb(221, 221, 183);
   margin: 0 2em;
 }
 .instruction h3 {
-  color: beige;
-  margin-bottom: 10px;
+  color:#373D20;
+  margin:1rem;
 }
 .instruction ul {
   list-style-type: square;
@@ -167,16 +211,19 @@ button {
 .searchResults {
   display: flex;
   flex-wrap: wrap;
-  background-color: rgb(46, 45, 45);
+  justify-content: center;
+  align-items: center;
+  padding:0 2rem;
+  background-color:#717744;
 }
 .searchResults h1 {
   width: 100%;
   text-align: center;
-  color: white;
+  color: #373D20;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 5;
+  font-size: 40px;
 }
 .search {
   display: flex;
@@ -189,5 +236,19 @@ button {
 }
 .list-item h3 {
   text-align: center;
-  margin: 1em auto;
+  margin:0 auto;
+}
+.feedback {
+  color:white;
+}
+.singleFoodRecipes{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.image{
+  border: 1px solid gray;
+  background-color:#ABAC7F;
+  border-radius: 10px;
+
 }

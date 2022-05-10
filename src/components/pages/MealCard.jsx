@@ -13,7 +13,7 @@ const MealCard = ({ meal }) => {
     
             <div className='mealcard'>
                 <h3>{strMeal}</h3>
-                <img src={strMealThumb} alt={strMeal} width="300px" />
+                <img src={strMealThumb} alt={strMeal} width="200px"/>
                 
             </div>
         </div>
